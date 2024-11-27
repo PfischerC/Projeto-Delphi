@@ -1,0 +1,4 @@
+inherited frmCadCliente1: TfrmCadCliente1
+  Caption = 'frmCadCliente1'
+  TextHeight = 15
+end
