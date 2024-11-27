@@ -1,0 +1,24 @@
+inherited FrmListarClientes: TFrmListarClientes
+  Caption = 'FrmListarClientes'
+  ClientHeight = 451
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  TextHeight = 15
+  inherited pnlCentral: TPanel
+    Height = 410
+  end
+  inherited pnlButton: TPanel
+    Top = 410
+    inherited btnQuatro: TButton
+      Left = 4
+      ExplicitLeft = 0
+    end
+  end
+  inherited acGeral: TActionList
+    Left = 448
+    Top = 40
+    inherited acIncluir: TAction
+      OnExecute = acIncluirExecute
+    end
+  end
+end

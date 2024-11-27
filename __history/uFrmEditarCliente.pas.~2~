@@ -1,0 +1,40 @@
+unit uFrmEditarCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFmrCadCliente, System.Actions,
+  Vcl.ActnList, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmEditarCliente = class(TfrmCadCliente)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    class procedure abrir;
+  end;
+
+var
+  frmEditarCliente: TfrmEditarCliente;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmEditarCliente }
+
+class procedure TfrmEditarCliente.abrir;
+begin
+if not Assigned(frmEditarCliente) then
+    Application.CreateForm(TfrmEditarCliente, frmEditarCliente);
+  with frmEditarCliente do
+    try
+      ShowModal;
+    finally
+      FreeAndNil(frmEditarCliente);
+    end;
+end;
+
+end.
